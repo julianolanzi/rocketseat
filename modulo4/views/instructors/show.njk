@@ -1,0 +1,51 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="card" >
+        <section class="avatar" style="background: url(https://source.unsplash.com/collection/3465564/500x500) no-repeat center center / cover "></section>
+        <section class="details">
+            <h3>Datalhes</h3>
+
+            <div class="item">
+                <div>Avatar
+                </div>
+                <div>{{ instructor.avatar_url }}</div>
+            </div>
+
+            <div class="item">
+                <div>Instrutor
+                </div>
+                <div>{{ instructor.name }}</div>
+            </div>
+
+            <div class="item">
+                <div>Yers old</div>
+                <div>{{ instructor.age }}</div>
+            </div>
+
+            <div class="item">
+                <div>gender</div>
+                <div>{{ "Masculino" if instructor.gender == "M" else "Feminino" }}</div>
+            </div>
+
+            <div class="item">
+                <div>Area de Atuação</div>
+                <div>
+                    <input type="text" name="services"  placeholder="Separe os serviços por virgula" value="{{ instructor.services }}" >
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Desde
+                </div>
+                <div>{{ instructor.created_at }}</div>
+            </div>
+
+            <a href="/instructors/{{ instructor.id }}/edit" class="button">Editar</a>
+
+        </section>
+
+    </section>
+</div>
+{% endblock content %}
