@@ -18,9 +18,7 @@ routes.delete("/instructors", instructors.delete)
 
 
 
-routes.get('/members', function (req, res) {
-    return res.render("members")
-})
+
 routes.get('/members', members.index)
 routes.get('/members/create', members.create)
 routes.get('/members/:id', members.show)
