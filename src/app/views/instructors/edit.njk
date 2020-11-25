@@ -21,10 +21,11 @@
 
                 <button type="submit">Deletar</button>
             </form>
+
             <script>
                 const formDelete = document.querySelector("#form-delete")
-                formDelete.addEventListenner("submit", function (event) {
-                    const confirmation confirm("Deseja Deletar")
+                formDelete.addEventListener("submit", function (event) {
+                    const confirmation = confirm("Deseja Deletar")
 
                     if (!confirmation) {
                         event.preventDefault()
